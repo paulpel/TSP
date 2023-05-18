@@ -31,9 +31,9 @@ def neighbour_switch(solution):
 def calc_distance(distance_matrix, solution):
     N = distance_matrix.shape[0]
     total_distance = 0
-    for i in range(N-1):
-        total_distance += distance_matrix[solution[i], solution[i+1]]
-    total_distance += distance_matrix[solution[N-1], solution[0]]
+    for i in range(N - 1):
+        total_distance += distance_matrix[solution[i], solution[i + 1]]
+    total_distance += distance_matrix[solution[N - 1], solution[0]]
 
     return total_distance
 

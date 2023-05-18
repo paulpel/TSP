@@ -57,9 +57,9 @@ def neighbour_switch(solution):
 def calc_distance(distance_matrix, solution):
     N = distance_matrix.shape[0]
     total_distance = 0
-    for i in range(N-1):
-        total_distance += distance_matrix[solution[i], solution[i+1]]
-    total_distance += distance_matrix[solution[N-1], solution[0]]
+    for i in range(N - 1):
+        total_distance += distance_matrix[solution[i], solution[i + 1]]
+    total_distance += distance_matrix[solution[N - 1], solution[0]]
 
     return total_distance
 
@@ -71,7 +71,8 @@ if __name__ == "__main__":
     cooling_rate = 0.95
 
     best_solution, best_distance = simulated_annealing(
-        n_cities, iterations, initial_temperature, cooling_rate)
+        n_cities, iterations, initial_temperature, cooling_rate
+    )
 
     print("Best solution:", best_solution)
     print("Best distance:", best_distance)
